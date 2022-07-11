@@ -16,4 +16,6 @@ Yes, the losses seemed to converge quicker and lower than the default notebook.
 - The Generator improves its ability to detect fakes by attempting to minimize the KL Divergence between the Generator and Discriminator.  By entering a feedback loop with the Generator during training, both NN modules compete with one another to obtain the lowest loss possible by minimizing the KL Divergence in both probability distributions. 
 3. Share a copy of the output image from the last step in the notebook (can be an upload to the ISVC Portal, or a link to the file in AWS Object Store).
 
+![Image](last_img0.png)
 ![Image](last_img.png)
+![Image](last_img2.png)
