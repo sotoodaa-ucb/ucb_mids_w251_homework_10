@@ -5,21 +5,14 @@ For this homework, you will pick one of the GAN notebooks in this GitHub repo an
 
 ### Submission:
 1. What changes did you make to the notebook[s]? Did your changes result in lower losses?
+- Decreased Generator res_blocks to 8 from 16.
+- Increased data loader batch size to 64 from 16.
+- Changed learning rate to 1e-3
+- Increased Generator blocks to 4 from 1.
+
+Yes, the losses seemed to converge quicker and lower than the default notebook.
+
 2. In your own words, how does the Discriminator improve its ability to detect fakes?
+- The Generator improves its ability to detect fakes by attempting to minimize the KL Divergence between the Generator and Discriminator.  By entering a feedback loop with the Generator during training, both NN modules compete with one another to obtain the lowest loss possible by minimizing the KL Divergence in both probability distributions. 
 3. Share a copy of the output image from the last step in the notebook (can be an upload to the ISVC Portal, or a link to the file in AWS Object Store).
 
-### GAN timeline
-![](GAN_timeline.JPG)
-
-### GAN use cases
-
-These are some use cases for GAN applications. However, note that there are cons associated with all of these applications. We urge you to be mindful with this new knowledge.
-
-- GAN for Data Augmentation: generate more labeled examples ([example](https://www.nature.com/articles/s41598-019-52737-x))
-- GAN for Privacy: Train only on GAN generated images as compared to using real patient data ([example](https://www.ahajournals.org/doi/full/10.1161/CIRCOUTCOMES.118.005122))
-- GAN for Anonymity: Safe environment for expressions ([example](https://github.com/hukkelas/DeepPrivacy))
-- GAN for Arts: Turn doodles into photorealistic landscapes ([example](https://github.com/NVlabs/SPADE))
-- GAN for Super Resolution: Image-to-Image translation 
-- GAN for Talking Heads: Image-and-Landmark-to-Video ([example](https://github.com/vincent-thevenin/Realistic-Neural-Talking-Head-Models))
-
-And many more...
